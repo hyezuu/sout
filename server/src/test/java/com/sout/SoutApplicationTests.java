@@ -1,10 +1,10 @@
-package com.sout.server;
+package com.sout;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServerApplicationTests {
+class SoutApplicationTests {
 
     @Test
     void contextLoads() {
