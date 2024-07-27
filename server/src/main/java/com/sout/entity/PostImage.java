@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter
 @Entity(name = "post_images")
 public class PostImage extends BaseCreatedTimeEntity {
     @Id

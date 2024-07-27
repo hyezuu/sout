@@ -7,7 +7,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter
 @Entity(name = "users")
 public class User extends BaseTimeEntity {
     @Id

@@ -9,7 +9,6 @@ import lombok.Setter;
 import java.util.List;
 
 @Getter
-@Setter
 @Entity(name = "comments")
 public class Comment extends BaseTimeEntity {
     @Id

@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-@Setter
 @Entity(name = "posts")
 public class Post extends BaseTimeEntity {
     @Id
