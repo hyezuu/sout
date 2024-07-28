@@ -13,10 +13,10 @@ public class User extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, nullable = false, length = 50)
+    @Column(unique = true, nullable = false, length = 12)
     private String username;
 
-    @Column(unique = true, nullable = false, length = 100)
+    @Column(unique = true, nullable = false, length = 30)
     private String email;
 
     //암호화 되어서 저장되기 때문에 길이제한을 두지 않는다.
@@ -31,7 +31,4 @@ public class User extends BaseTimeEntity {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private UserStatus status = UserStatus.PENDING;
-
-    @Column(nullable = false)
-    private boolean emailVerified = false;
 }
