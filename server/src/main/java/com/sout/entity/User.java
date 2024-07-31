@@ -3,11 +3,14 @@ package com.sout.entity;
 import com.sout.common.base.BaseTimeEntity;
 import com.sout.common.enums.UserStatus;
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Entity(name = "users")
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class User extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

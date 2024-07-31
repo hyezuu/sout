@@ -4,13 +4,17 @@ import com.sout.common.base.BaseCreatedTimeEntity;
 import com.sout.entity.Post;
 import com.sout.entity.User;
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
-@Setter
-@Entity(name = "post_likes")
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "post_id"}))
+@Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "post_likes"
+    //해당 조합은 유일하다
+    ,uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "post_id"}))
 public class PostLike extends BaseCreatedTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
